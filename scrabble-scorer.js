@@ -41,6 +41,7 @@ function initialPrompt() {
 let simpleScore = function(word) {
   word = word.toUpperCase();
   let letterPoints = `${word.length}`;
+  letterPoints = Number(letterPoints);
   return letterPoints;
 };
 
@@ -56,6 +57,7 @@ let vowelBonusScore = function(word) {
       letterPoints ++;
     }
   }
+  letterPoints = Number(letterPoints);
   return letterPoints;
 };
 
@@ -66,6 +68,7 @@ let scrabbleScore = function scrabbleScore(word) {
   for (let i = 0; i <word.length; i++) {
    letterPoints += newPointStructure[word[i]]
   }
+  letterPoints = Number(letterPoints);
   return letterPoints
 };
 
